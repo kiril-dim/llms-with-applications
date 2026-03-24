@@ -3,14 +3,21 @@ name = "llms-with-applications"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "jupyter>=1.1.1",
     "matplotlib>=3.10.8",
+    "mlflow>=3.10.0",
     "notebook>=7.5.3",
     "pandas>=3.0.1",
     "scikit-learn>=1.8.0",
     "seaborn>=0.13.2",
     "torch>=2.10.0",
     "transformers>=5.2.0",
+]
+
+[tool.uv]
+override-dependencies = [
+    "mlflow>=3.10.0 ; python_version >= '3.12'",
+    "pandas>=3.0.1",
 ]
